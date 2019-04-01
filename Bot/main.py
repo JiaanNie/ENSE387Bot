@@ -1,4 +1,6 @@
 import discord
+import serial
+
 #
 # #TOKEN = 'NTI1OTI4NDM4Mzk0MjU3NDA4.DwG4VQ.s_CfQVl7F5LhFk7y3G1NGvAzr0g'
 #TOKEN = "NTI3MzI1ODMxODIzODg0MzI4.DwSGzg.1874KiUFa3PXPoYWtJJHyGM2eTY"
