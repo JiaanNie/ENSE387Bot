@@ -6,7 +6,7 @@ import serial
 #TOKEN = "NTI3MzI1ODMxODIzODg0MzI4.DwSGzg.1874KiUFa3PXPoYWtJJHyGM2eTY"
 TOKEN = "NTYxNjk3MDAzMzI3NzE3NDAz.XKABSQ.2eVUPIpS-Ft4wKsqgVONJw0_LAI"
 client = discord.Client()
-
+ser = serial.Serial()
 
 @client.event
 async def on_message(message):
@@ -16,19 +16,23 @@ async def on_message(message):
 
     if message.content.startswith('!purpose'):
         msg = 'Hello {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
+        await message.channel.send( msg)
+        
     if message.content.startswith('!up'):
         msg = "Moving the bot up by 3 second".format(message)
-        await client.send_message(message.channel, msg)
+        await message.channel.send(msg)
+        
     if message.content.startswith('!down'):
         msg = "Moving the bot down by 3 second".format(message)
-        await client.send_message(message.channel, msg)
+        await message.channel.send(msg)
+        
     if message.content.startswith('!right'):
         msg = "Moving the bot right by 3 second".format(message)
-        await client.send_message(message.channel, msg)
+        await message.channel.send(msg)
+
     if message.content.startswith('!left'):
         msg = "Moving the bot left by 3 second".format(message)
-        await client.send_message(message.channel, msg)
+        await message.channel.send(msg)
 
 @client.event
 async def on_ready():
